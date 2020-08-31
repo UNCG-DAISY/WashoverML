@@ -8,3 +8,29 @@ Classifier for detecting washover in post-storm images
 
 ### Code
 - Finetuned VGG16 model
+
+
+### Directory Structure:
+
+Should look like:
+
+```{sh}
+Users/ebgoldstein/WashoverML
+                    ├── readme.md
+                    ├── license
+                    ├── data
+                    │   ├── raw
+                    │   ├── training                  
+                    │   │    ├── nowashover
+                    │   │    │     ├── C26047788.jpg
+                    │   │    │     └── ...
+                    │   │    └── washover
+                    │   ├── validation
+                    │   └── testing
+                    └── src
+                        ├── FullRetrain_VGG16.ipynb
+                        ├── GradCAM.ipynb
+                        └── .....
+                        
+                        
+```
