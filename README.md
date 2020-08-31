@@ -1,4 +1,4 @@
-# Washover
+# Washover ML
 Classifier for detecting washover in post-storm images
 
 ### Data
