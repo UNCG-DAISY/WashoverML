@@ -20,11 +20,11 @@ Users/ebgoldstein/WashoverML
                     ├── license
                     ├── data
                     │   ├── raw
-                    │   ├── training                  
                     │   │    ├── nowashover
                     │   │    │     ├── C26047788.jpg
                     │   │    │     └── ...
                     │   │    └── washover
+                    │   ├── training                  
                     │   ├── validation
                     │   └── testing
                     └── src
