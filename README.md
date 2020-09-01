@@ -15,7 +15,7 @@ Classifier for detecting washover in post-storm images
 Should look like:
 
 ```{sh}
-Users/ebgoldstein/WashoverML
+          ../WashoverML
                     ├── readme.md
                     ├── license
                     ├── data
