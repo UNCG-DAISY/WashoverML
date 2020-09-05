@@ -8,7 +8,7 @@ Classifier for detecting washover in NOAA [Emergency Response Imagery](https://s
  The notebooks in `src` are all included in this repository, but the data and model are excluded via the `.gitignore`. Therefore the user must:
 1. download the model weights from link below
 2. download the appropriate imagery from the links below 
-3. sort the imagery into the correct directories.
+3. sort the imagery into the correct directories
 
 The project directory structure should look like this:
 
@@ -34,16 +34,32 @@ The project directory structure should look like this:
 
 ### Data
 
-This project uses post-storm images from Hurricane Florence (2018) and Hurricane Michael (2018). All images are retreived from NOAA via [`psi-collect`](https://github.com/UNCG-DAISY/psi-collect).
+This project uses post-storm images from Hurricane Florence (2018) and Hurricane Michael (2018). 
 
-- Training and validation data are from Hurricane Florence. We use two groups of images. First, we use images that were labeled as part of a previous data release [here](https://doi.org/10.6084/m9.figshare.11604192.v1). There is class imbalance in this set of labels - images with washover are the rare class. We therefore add new examples of washover from the same group of images. These additional images are listed in the XXXX.csv in the repo. 
-- Testing data is from Hurricane Michael. These images have been labebled by two people into washover/no washover classes. The images and their class are listed in the XXXX.csv in the repo. 
+- Training and validation data are from Hurricane Florence. We use two groups of images. First, we use images that were labeled as part of a previous data release [here](https://doi.org/10.6084/m9.figshare.11604192.v1). There is class imbalance in this set of labels - images with washover are the rare class. We therefore add new examples of washover from the same group of images. These list of all Hurricane Florence images used in the project are in `data/manifest/`, specifically `Florence_nowashover.txt` and `Florence_washover.txt`. 
+- Testing data is from Hurricane Michael. These images have been labebled by two people into washover/no washover classes. These list of all Hurricane Michael images used in the project are in `data/manifest/`, specifically `Michael_nowashover.txt` and `Michael_washover.txt` in the repo.  
 
-Note that users are responsible for downloading the Hurricane Florence images and Hurricane Michael imagery. Florence imagery should be placed in the `/data/raw` directory, in appropriate folders (`/washover` and `/nowashover`). 
+#### Retrieving data
 
-Users must also make directories for training and validation data (i.e., `data/training/washover`,`data/training/nowashover`, `data/validation/washover`,`data/validation/nowashover`). The `PictureSplitter.ipynb` will take images from the raw directory and place them into training and validation directory
+Users are responsible for downloading the publicly avaiable Hurricane Florence and Hurricane Michael imagery. This can be done by downloading the catalogs using the NOAA [Emergency Response Imagery](https://storms.ngs.noaa.gov/) website OR using [`psi-collect`](https://github.com/UNCG-DAISY/psi-collect). The needed archives are:
 
-The test data - Hurricane Michael imagery - should be placed in the appropriate directories: `/testing_michael/washover` and `/testing_michael/nowashover`
+Hurricane Florence from Sept. 17th 2018 (A) 
+Hurricane Michael from Oct. 11th 2018 (A)
+
+The `psi-collect` commands to download the NOAA image archives are:
+
+```{sh}
+pstorm collect -s Florence 20180917a_jpgs -d
+pstorm collect -s Michael 20181011a_jpgs -d
+```
+
+Note that the archives contain many more images than used in this study, and specific images need to be moved to proejct directories.
+
+#### Sorting data in appropriate directories
+
+The Hurricane Florence imagery listed in the `data/manifest` text files should be placed in `/data/raw` directory, in appropriate folders (`/washover` and `/nowashover`). Users must also make directories for training and validation data (i.e., `data/training/wash`,`data/training/nowash`, `data/validation/wash`,`data/validation/nowash`). The `PictureSplitter.ipynb` code will take images from the raw directory and place them into these training and validation directories. 
+
+Hurricane Michael imagery listed in the `data/manifest` text files should be placed in the appropriate directories: `/testing_michael/washover` and `/testing_michael/nowashover`.
 
 ### Code
 This repository has 4 notebooks. 

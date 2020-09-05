@@ -1,4 +1,8 @@
-data/
+data/raw
+data/training
+data/validation
+data/testing_michael
+
 src/saved*
 src/GradCAM_List.ipynb
 src/images/
