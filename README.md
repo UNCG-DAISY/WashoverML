@@ -24,7 +24,11 @@ The project directory structure should look like this:
                     │   │    └── washover
                     │   ├── training                  
                     │   ├── validation
-                    │   └── testing
+                    │   ├── testing_michael
+                    │   ├── manifest
+                    │   │    ├── Florence_nowashover.txt
+                    │   │    └── ...
+                    │   └── VGG_Michael_results.csv
                     └── src
                         ├── FullRetrain_VGG16.ipynb
                         ├── GradCAM.ipynb
