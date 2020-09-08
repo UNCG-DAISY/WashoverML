@@ -70,7 +70,7 @@ We do not provide a code to move images into directories, but we accomplished th
 ### Code
 This repository has 4 notebooks. 
 - A routine to split data into testing and validation set `PictureSplitter.ipynb`
-- Code to finetuned the VGG16 model starting from imagenet weights and using 400 x 400 NOAA images `FullRetrain_VGG16.ipynb`
+- Code to finetuned the VGG16 model starting from imagenet weights and using 416 x 416 NOAA images `FullRetrain_VGG16.ipynb`
 - Code to test the model with Hurricane Michael imagery `Hurricane_Michael_Test.ipynb`
 - Code to look at GradCAM with Hurricane Michael test imagery `GradCAM.ipynb`
 
