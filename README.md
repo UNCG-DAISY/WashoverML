@@ -40,7 +40,7 @@ The project directory structure should look like this:
 
 This project uses post-storm images from Hurricane Florence (2018) and Hurricane Michael (2018). 
 
-- Training and validation data are from Hurricane Florence. We use two groups of images. First, we use images that were labeled as part of a previous data release [here](https://doi.org/10.6084/m9.figshare.11604192.v1). There is class imbalance in this set of labels - images with washover are the rare class. We therefore add new examples of washover from the same group of images. These list of all Hurricane Florence images used in the project are in `data/manifest/`, specifically `Florence_nowashover.txt` and `Florence_washover.txt`. 
+- Training and validation data are from Hurricane Florence. We use two groups of images. First, we use images that were labeled using the [Coastal Image Labeler](https://github.com/UNCG-DAISY/Coastal-Image-Labeler) and subject to a previous data release [here](https://doi.org/10.6084/m9.figshare.11604192.v1). There is class imbalance in this set of labels - images with washover are the rare class. We therefore add new examples of washover from the same group of images. These list of all Hurricane Florence images used in the project are in `data/manifest/`, specifically `Florence_nowashover.txt` and `Florence_washover.txt`. 
 - Testing data is from Hurricane Michael. These images have been labebled by two people into washover/no washover classes. These list of all Hurricane Michael images used in the project are in `data/manifest/`, specifically `Michael_nowashover.txt` and `Michael_washover.txt` in the repo.  
 
 ### Retrieving Imagery
