@@ -1,4 +1,6 @@
 # Washover ML
+[![DOI](https://zenodo.org/badge/290877412.svg)](https://zenodo.org/badge/latestdoi/290877412)
+
 Classifier for detecting washover in NOAA [Emergency Response Imagery](https://storms.ngs.noaa.gov/).
 
 ![Washover](https://github.com/UNCG-DAISY/WashoverML/blob/master/image.png)
